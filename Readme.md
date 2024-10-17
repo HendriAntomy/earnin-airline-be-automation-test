@@ -10,7 +10,7 @@
 - Make sure both postgres, wiremock and be services running by using `docker container ls -a`
 - Open the Swagger UI http://localhost:8000/docs#/
 
-## Executing the Test
+## Executing the Tests
 - Open with your favorite IDE (e.g. Intellij IDEA or VSCode)
 - You can run the test by using command :`./gradlew clean test`
 - Report can be seen on folder `build/reports/tests/test/index.html`
