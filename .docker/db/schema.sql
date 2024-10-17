@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS passengers (
     PRIMARY KEY (flight_id, customer_id)
 );
 
+-- clean up before inserting fresh data
+TRUNCATE TABLE passengers, customers, flights;
 
 INSERT INTO flights (id, departure_time, arrival_time, departure_airport, arrival_airport, departure_timezone, arrival_timezone) VALUES
     -- International Flights
