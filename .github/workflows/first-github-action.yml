@@ -24,6 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Run Test
       run : ./gradlew clean test
+    - name: check downloaded artifact
+      run: ls -alR
     - name: Upload Junit Report
       uses: actions/upload-artifact@v4.4.3
       with:
