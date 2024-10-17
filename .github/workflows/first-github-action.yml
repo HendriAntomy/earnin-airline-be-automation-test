@@ -26,5 +26,8 @@ jobs:
     - name: Verify Java installation
       run: java -version
 
+    - name: Change gradlew to executable
+      run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
