@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "flights": {
+      "items": {
+        "$ref": "FlightResponse.json"
+      },
+      "title": "Flights",
+      "type": "array"
+    }
+  },
+  "required": [
+    "flights"
+  ],
+  "title": "ListFlightsResponse",
+  "type": "object"
+}

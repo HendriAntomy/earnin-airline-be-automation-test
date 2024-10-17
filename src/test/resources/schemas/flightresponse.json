@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "arrival_airport": {
+      "title": "Arrival Airport",
+      "type": "string"
+    },
+    "arrival_time": {
+      "format": "date-time",
+      "title": "Arrival Time",
+      "type": "string"
+    },
+    "departure_airport": {
+      "title": "Departure Airport",
+      "type": "string"
+    },
+    "departure_time": {
+      "format": "date-time",
+      "title": "Departure Time",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "departure_time",
+    "arrival_time",
+    "departure_airport",
+    "arrival_airport"
+  ],
+  "title": "FlightResponse",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "oneOf": [
+    {
+      "$ref": "CreateOrUpdatePassengerRequest.json"
+    },
+    {
+      "$ref": "FlightResponse.json"
+    },
+    {
+      "$ref": "HTTPValidationError.json"
+    },
+    {
+      "$ref": "ListFlightsResponse.json"
+    },
+    {
+      "$ref": "PassengerResponse.json"
+    },
+    {
+      "$ref": "ValidationError.json"
+    }
+  ]
+}
