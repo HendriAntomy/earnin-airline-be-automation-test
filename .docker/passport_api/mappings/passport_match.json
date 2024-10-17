@@ -1,0 +1,24 @@
+{
+    "priority": 1,
+    "request": {
+      "method": "GET",
+      "url": "/passport",
+      "bodyPatterns": [
+        {
+          "matchesJsonPath": "$[?(@.passport_id =~ /BC150[0-9]/)]"
+        }
+      ]
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "transformers": ["response-template"],
+      "jsonBody": {
+        "passport_id": "{{jsonPath request.body '$.passport_id'}}",
+        "first_name": "{{#if (eq (jsonPath request.body '$.passport_id') 'BC1500')}}Shauna{{else if (eq (jsonPath request.body '$.passport_id') 'BC1501')}}John{{else if (eq (jsonPath request.body '$.passport_id') 'BC1502')}}Alice{{else if (eq (jsonPath request.body '$.passport_id') 'BC1503')}}Robert{{else if (eq (jsonPath request.body '$.passport_id') 'BC1504')}}Emily{{else if (eq (jsonPath request.body '$.passport_id') 'BC1505')}}David{{else if (eq (jsonPath request.body '$.passport_id') 'BC1506')}}Sophia{{else if (eq (jsonPath request.body '$.passport_id') 'BC1507')}}James{{else if (eq (jsonPath request.body '$.passport_id') 'BC1508')}}Michael{{else if (eq (jsonPath request.body '$.passport_id') 'BC1509')}}Linda{{/if}}",
+        "last_name": "{{#if (eq (jsonPath request.body '$.passport_id') 'BC1500')}}Davila{{else if (eq (jsonPath request.body '$.passport_id') 'BC1501')}}Doe{{else if (eq (jsonPath request.body '$.passport_id') 'BC1502')}}Johnson{{else if (eq (jsonPath request.body '$.passport_id') 'BC1503')}}Williams{{else if (eq (jsonPath request.body '$.passport_id') 'BC1504')}}Brown{{else if (eq (jsonPath request.body '$.passport_id') 'BC1505')}}Smith{{else if (eq (jsonPath request.body '$.passport_id') 'BC1506')}}Miller{{else if (eq (jsonPath request.body '$.passport_id') 'BC1507')}}Taylor{{else if (eq (jsonPath request.body '$.passport_id') 'BC1508')}}Wilson{{else if (eq (jsonPath request.body '$.passport_id') 'BC1509')}}Davis{{/if}}"
+      }
+    }
+  }

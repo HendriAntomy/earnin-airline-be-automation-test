@@ -1,0 +1,24 @@
+{
+    "priority": 1,
+    "request": {
+      "method": "GET",
+      "url": "/passport",
+      "bodyPatterns": [
+        {
+          "matchesJsonPath": "$[?(@.passport_id =~ /EN[0-9]{6}/)]"
+        }
+      ]
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "transformers": ["response-template"],
+      "jsonBody": {
+        "passport_id": "{{jsonPath request.body '$.passport_id'}}",
+        "first_name": "Hendri",
+        "last_name": "Antomy"
+      }
+    }
+  }
