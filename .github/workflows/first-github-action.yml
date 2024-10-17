@@ -24,9 +24,6 @@ jobs:
       uses: hoverkraft-tech/compose-action@v2.0.1
       with:
         compose-file: "./.docker/compose.yml"
-    - name: Inject Mock Data
-      run: |
-          docker-compose exec -it postgres bash -c "/home/scripts/exec_sql.sh schema.sql"
     - name: Set up JDK 11
       uses: actions/setup-java@v4.4.0
       with:
