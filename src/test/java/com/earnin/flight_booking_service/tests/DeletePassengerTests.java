@@ -11,10 +11,13 @@ import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("delete_passenger")
 public class DeletePassengerTests extends BaseTest {
 
+    @Tag("P0")
     @Test
     public void deletePassengerData() {
         Flight flightData = getFlightData(true);

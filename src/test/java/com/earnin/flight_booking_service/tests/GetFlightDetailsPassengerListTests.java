@@ -5,13 +5,17 @@ import com.earnin.flight_booking_service.base.ResponseData;
 import com.earnin.flight_booking_service.models.common.Flight;
 import com.earnin.flight_booking_service.models.response.GetFlightPassengerDetailsResponse;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
+
+@Tag("get_flights_details")
 public class GetFlightDetailsPassengerListTests extends BaseTest {
 
+    @Tag("P1")
     @Test
     public void getFlightDetailsFromDifferentTimezones() {
         Flight flight = getFlightData(false);
@@ -28,6 +32,7 @@ public class GetFlightDetailsPassengerListTests extends BaseTest {
 
     }
 
+    @Tag("P1")
     @Test
     public void getFlightDetailsFromSameTimezones() {
         Flight flight = getFlightData(true);

@@ -10,13 +10,16 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
+@Tag("update_passenger")
 public class UpdatePassengerTests extends BaseTest {
 
 
+    @Tag("P0")
     @Test
     public void updatePassengerDataWithValidData() {
 
@@ -36,6 +39,7 @@ public class UpdatePassengerTests extends BaseTest {
 
     }
 
+    @Tag("P1")
     @Test
     public void updatePassengerDataWithInvalidData() {
         Flight flightData = getFlightData(true);

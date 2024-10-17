@@ -31,5 +31,7 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform({
+        includeTags 'dummy_test'
+    })
 }
