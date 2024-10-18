@@ -9,7 +9,7 @@ services:
       - ./db:/home/scripts
     ports:
       - 5432:5432
-    entrypoint: ["/home/scripts/exec_sql.sh"]
+    entrypoint: ["chmod +x /home/scripts/exec_sql.sh","/home/scripts/exec_sql.sh"]
 
   passport_api:
     image: wiremock/wiremock:3.9.1

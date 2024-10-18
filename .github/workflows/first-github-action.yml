@@ -20,8 +20,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Change exec_sql.sh to executable
-      run: chmod +x ./.docker/db/exec_sql.sh
     - name: Run docker-compose
       uses: hoverkraft-tech/compose-action@v2.0.1
       with:
