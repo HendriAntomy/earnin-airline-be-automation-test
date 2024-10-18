@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres
+    image: postgres:17.0
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -21,7 +21,7 @@ services:
     - WIREMOCK_OPTIONS=--local-response-templating
 
   airline_api_dev:
-    image: hendriantomy/earnin-airline-service
+    image: hendriantomy/earnin-airline-service:latest
     ports: 
       - 8000:8000
     environment:
