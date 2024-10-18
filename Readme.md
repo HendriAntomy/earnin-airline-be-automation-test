@@ -14,15 +14,3 @@
 - You can run the test by using command :`./gradlew clean test`
 - Report can be seen on folder `build/reports/tests/test/index.html`
 
-TODO : 
-1. Add Logging
-2. Add Synchronous data storage
-3. Find out how to run with specific tags
-4. Try use test suite?
-5. Run with different environment
-
-Pipeline :
-1. Create another repo for the BE code implementation
-2. Try to find how to add schema
-3. Try to create a pipeline to trigger build pipeline for publishing docker, then run the automation test from different repo
-4. 
