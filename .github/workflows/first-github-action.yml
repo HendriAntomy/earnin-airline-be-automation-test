@@ -29,6 +29,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '11'
+        cache: 'gradle'
     - name: Change gradlew to executable
       run: chmod +x gradlew
     - name: Run Test
